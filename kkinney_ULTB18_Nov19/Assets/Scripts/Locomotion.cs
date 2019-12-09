@@ -38,7 +38,11 @@ namespace Valve.VR.InteractionSystem
             float horizontalAxis = Input.GetAxis("Joystick_X");
             float verticalAxis = Input.GetAxis("Joystick_Y");
 
-            rb.AddForce(new Vector3(horizontalAxis, verticalAxis, 0));
+            Vector3 movement = new Vector3(horizontalAxis, verticalAxis, 0f);
+
+            Vector3 localMovement = transform.InverseTransformVector(movement);
+
+            rb.AddForce(localMovement * speed);
         }
     }
 }
