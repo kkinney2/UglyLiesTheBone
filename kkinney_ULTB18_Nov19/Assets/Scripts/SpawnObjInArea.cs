@@ -71,7 +71,7 @@ namespace Valve.VR.InteractionSystem
             }
         }
 
-        private void OnCollisionStay(Collider other)
+        private void OnCollisionStay(Collision other)
         {
 
         }
