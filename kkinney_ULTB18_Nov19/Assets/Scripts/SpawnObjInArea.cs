@@ -51,7 +51,7 @@ namespace Valve.VR.InteractionSystem
             }
         }
 
-        private void OnTriggerEnter(Collider other)
+        private void OnCollisionEnter(Collision other)
         {
             if (other.gameObject.GetComponent<Hand>())
             {
@@ -71,12 +71,12 @@ namespace Valve.VR.InteractionSystem
             }
         }
 
-        private void OnTriggerStay(Collider other)
+        private void OnCollisionStay(Collider other)
         {
 
         }
 
-        private void OnTriggerExit(Collider other)
+        private void OnCollisionExit(Collision other)
         {
             if (other.gameObject.GetComponent<Hand>())
             {
