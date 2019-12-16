@@ -21,7 +21,7 @@ public class Locomotion : MonoBehaviour
 
     private void Awake()
     {
-        m_CharacterController.GetComponent<CharacterController>();
+        m_CharacterController = GetComponent<CharacterController>();
     }
 
 
